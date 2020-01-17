@@ -1,5 +1,5 @@
 # twitterro
-sosial media using django
+  sosial media using django
 
 ## start new project in django
-### Django-admin startproject twitterro
+  Django-admin startproject twitterro
