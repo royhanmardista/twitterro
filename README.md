@@ -1,4 +1,5 @@
 # twitterro
+<<<<<<< HEAD
     sosial media using django
 
 ## start new project in django
@@ -21,3 +22,9 @@
 
 ## add admin
     python manage.py createsuperuser
+=======
+  sosial media using django
+
+## start new project in django
+  Django-admin startproject twitterro
+>>>>>>> ef933cc46df64c0e48dc131ce854d6d491ff179d
