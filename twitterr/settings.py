@@ -122,7 +122,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# this is where the folder is
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# this is how you access it
+MEDIA_URL = '/media/'
+
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 LOGIN_REDIRECT_URL = 'post-home'
 LOGIN_URL = 'login'
+
