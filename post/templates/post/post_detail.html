@@ -4,11 +4,19 @@
     <img class="rounded-circle article-img" src="{{ object.author.profile.image.url }}" alt="">
     <div class="media-body">
         <div class="article-metadata">
-            <a class="mr-2" href="#">{{ object.author }}</a>
+            <a class="mr-2" href="{% url 'user-post' object.author.username %}">{{ object.author }}</a>
             <small class="text-muted">{{ object.date_posted | date:'P D d M Y' }}</small>
+
         </div>
         <h2 class="article-title">{{ object.title }}</h2>
         <p class="article-content">{{ object.content }}</p>
+        {% if object.author == user %}
+        <div>
+            <a class="btn btn-info btn-sm my-1" href="{% url 'post-update' object.id %}">Update</a>
+            <a class="btn btn-danger btn-sm my-1" href="{% url 'post-delete' object.id %}">Delete</a>
+        </div>
+        {% endif %}
     </div>
+
 </article>
 {% endblock content%}
